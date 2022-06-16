@@ -8,6 +8,7 @@ url = 'https://lifena.netlify.app/'
 response = requests.get(url)
 
 # print(response.text)
+
 # print(response.url)
 
 # print(response.content)

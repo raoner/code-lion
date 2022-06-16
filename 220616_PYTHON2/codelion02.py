@@ -13,7 +13,7 @@
 # else:
 #     print('동기가 아니네..')
 
-# if step02 pythonly
+##### if step02 pythonly
 
 # orders = ['짜장','짬뽕','탕수육']
 # food = input('먹고싶은 메뉴를 입력해주세요 : ')
@@ -22,11 +22,11 @@
 # else:
 #     print('주문할 수 없습니다.')
 
-# if step 03 pythonly
+##### if step 03 pythonly
 
-menu = {'짜장':4000,'짬뽕':5000,'탕수육':9000}
-food = input('먹고싶은 메뉴를 입력해주세요 : ')
-if food in menu:
-    print(menu[food], '원 입니다.')
-else:
-    prit('주문 불가')
+# menu = {'짜장':4000,'짬뽕':5000,'탕수육':9000}
+# food = input('먹고싶은 메뉴를 입력해주세요 : ')
+# if food in menu:
+#     print(menu[food], '원 입니다.')
+# else:
+#     prit('주문 불가')
