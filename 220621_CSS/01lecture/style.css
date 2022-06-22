@@ -1,0 +1,44 @@
+
+#news-category{
+    color:red;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: 'Nanum Myeongjo', serif;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    
+    
+}
+
+.highlight {
+    background-color: yellow;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#news-headlines{
+    text-align: left;
+}
+
+body > h3.news-title{
+    color:blue;
+}
+
+.news-title.news-sokbo{
+    color:red;
+}
+
+/* *{
+    font-style:italic;
+} */
+
+.news-article{
+    color:blue;
+}
+.news-title{
+    color:red;
+}

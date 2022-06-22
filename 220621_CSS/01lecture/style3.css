@@ -1,0 +1,69 @@
+
+body{
+    margin: 0px;
+
+}
+#header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+    width:100vw;
+    height:100px;
+    background-color: orange;
+    box-sizing: border-box;
+}
+
+#flex-container{
+    display:flex;
+    /* flex.. 유연하게. */
+    /* justify-content: start; */
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    
+    
+
+    /* justify-content: right; */
+    /* justify-content: space-evenly; */
+    /* justify 한다? 내용물을 어떻게 배치를 할 것이냐?
+    디스플레이가 플렉스컨테이너 안에 넣었기 때문에
+    이 플렉스 일 때만 작동 함. 공백을 균등하게 배분하여라' */
+    width:90vw; 
+    /* 1vw 폭,넓이 1% 90vw 90% */
+    height:90vh; 
+    /* 1vh 높이 화면의 90%? */
+    /* background-color: aliceblue; */
+    background-color: yellow;
+}
+
+.flex-child{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    width:250px;
+    height:250px;
+    
+    background-color: dodgerblue;
+
+    font-size: 30px;
+    color:white;
+    box-sizing: border-box;
+    
+}
+#logo{
+    color:white;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 40px;
+}
+#controls{
+    display: flex;
+    margin-right: 40px;
+}
+#control-login{
+    margin-right: 25px;
+}

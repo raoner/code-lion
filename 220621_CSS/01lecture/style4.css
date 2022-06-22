@@ -1,0 +1,61 @@
+/* body{
+    margin:0px;
+} */
+#position-container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+    width:90vw;
+    height:90vh;
+    border:1px solid black;
+    border-radius: 5px;
+}
+
+#red-square{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    
+    /* position: relative; */
+    /* 상대적 relative */
+    position: static;
+
+    top: 20px;
+    right:200px;
+
+    width:25vh;
+    height:25vh;
+    background-color: red;
+}
+
+#yellow-square{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+    /* position: absolute; */
+    /* position: fixed;
+    bottom:25px;
+    right:25px; */
+/*     
+    top:100px;
+    left:5px; */
+    position: sticky;
+    bottom:25px;
+
+    width:25vh;
+    height:25vh;
+    background-color: yellow;
+
+}
+
+#green-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25vh;
+    height: 25vh;
+    background-color: green;
+}

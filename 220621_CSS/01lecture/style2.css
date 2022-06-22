@@ -1,0 +1,74 @@
+img.square{
+    width: 1000px;
+    height: 1280px;
+    object-fit:contain;
+    /* object-fit: cover; 썸네일, 커버 */
+    /* object-fit: none; */
+}
+#outer-box{
+    width: 1280px;
+    height: 720px;
+    background-color: yellow;
+}
+
+.inner-box{
+    display: inline;
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    /* padding 들여쓰기 */
+    padding: 10px;
+    /* padding: 100px 10px 50px 20px;  */
+    /* 상 우 하 좌 시계방향? */
+    /* padding-top: 40px; */
+    /* padding-left: 100px; */
+    margin: 10px;
+    border: 4px solid red;
+    /* border 선굵기 스타일 색상 */
+    box-sizing: border-box;
+    color: white;
+}
+
+#news-category{
+    color:red;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: 'Nanum Myeongjo', serif;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    
+    
+}
+
+.highlight {
+    background-color: yellow;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#news-headlines{
+    text-align: left;
+}
+
+body > h3.news-title{
+    color:blue;
+}
+
+.news-title.news-sokbo{
+    color:red;
+}
+
+/* *{
+    font-style:italic;
+} */
+
+.news-article{
+    color:blue;
+}
+.news-title{
+    color:red;
+}
