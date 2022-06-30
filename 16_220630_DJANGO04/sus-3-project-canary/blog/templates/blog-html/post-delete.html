@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Delete</h1>
+    <h2>정말 삭제하시겠습니까?</h2>
+
+    <form action="/blog-url/{{ post.id }}/delete/" method="post">
+        {% csrf_token %} 
+        <!-- 모든 것은 요청 이다. 엑센의 유알엘 임의 숫자 딜리트를 ㄹ엔터.. 포스트 요청 상황을.. 
+            폼을 만들고 눈에 보이지 않고 간단하게 보낼 수 있다. 삭제라고 누르는.. 외부에서 다른 
+            사이트에서 저희가 들어와서. 모르는 사람이 모르는 사람이 돈
+            서로 다른 곳에서 요청에 의한 공격. 개발자가 의도하지 않은 곳에서의 요청.
+            주소와 요청 알면 사방에서 할 수 있다.
+            그래서 요런 부분을 추가하는 것이다.
+        -->
+       <input type="submit" value="예" />
+    </form>
+    <a href='/blog-url/{{ post.id }}/read/'>돌아가기</a>
+</body>
+</html>

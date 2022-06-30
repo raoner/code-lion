@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+<body>
+    <h1>Create</h1>
+    <a href="javascript:window.history.back();">Back</a>
+
+    <form action="/blog/create/" method="post"> 
+        <!-- http요청이라는 것은 어떤것을 명시해줄수 있는데. 포스트.. 뷰함수에  -->
+        {% csrf_token %}
+        <!-- 앞뒤로 슬러쉬 해야함 어디에 보낼건지(action) 어떻게 보낼 건지 정하는 것(method) -->
+        Title: <input type="text" name="title" value="Title" />
+        <div>
+            <textarea name="content">
+                Enter Text Here...
+            </textarea>
+        </div>
+        <input type="submit" value="작성" />
+    </form>
+</body>
+</html>

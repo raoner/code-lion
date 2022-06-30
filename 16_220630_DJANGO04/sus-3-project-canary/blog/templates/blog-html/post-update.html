@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update</h1>
+    <form action="/blog-url/{{ post.id }}/update/" method="post">
+        {% csrf_token %}
+        <table
+            border="0"
+            width="50%"
+            height="200"
+            cellspacing="1">
+            <caption>update post</caption>
+            <!-- <thead></thead> -->
+            <tbody>
+                <tr align="center" bgcolor="white">
+                    <th>Title</th>
+                        <td align="left"><input type="text" name="title" value="{{ post.title }}" /></td>
+                </tr>
+                <tr align="center" bgcolor="white">
+                    <th>Content</th>
+                        <td align="left"><textarea name="content">{{ post.content }}</textarea></td>
+                </tr>
+                <tr align="center" bgcolor="white"></tr>                <tr>
+                    <th>Password</th>
+                        <td align="left"><input type="password" name="password" value="" /></td>
+                </tr>
+                <tr align="center" bgcolor="white"></tr>                <tr>
+                    <th><br></th>
+                        <td align="left"><input type="submit" value="작성" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form><br>
+    <a href="/blog-url/home/">Go Back</a>
+</body>
+</html>
