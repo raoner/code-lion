@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survay</title>
+</head>
+<body>
+    <h1>Survay</h1>
+    {% for survay in survay_list %}
+        <div>{{ survay.id }}. {{ survay.title }}
+            <a href="/survay-html/{{ survay.id }}/read/">result</a>
+        </div>
+    {% endfor %}
+<a href="/survay-html/create/">Write Post</a>
+</body>
+</html>

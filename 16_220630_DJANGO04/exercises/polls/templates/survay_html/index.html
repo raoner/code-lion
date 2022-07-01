@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survay</title>
+</head>
+<body>
+    <h1>Survay Home</h1>
+    {% csrf_token %} 
+    {% for survay in survay_list %}
+        <div>{{survay.id}}. age:{{survay.age}}, sex:{{survay.sex}}, residence:{{survay.residence}} 
+            <a href="/survay_html/{{survay.id}}/read/">Result survay</a>
+        </div>
+    {% endfor %}
+
+    <a href="/survay_urls/create/">Start survay</a>
+
+</body>
+</html>
