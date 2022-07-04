@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner landing index</title>
+</head>
+<body>
+    <p>
+        <!-- <h1>{{ now|date:"D d M Y" }}</h1> -->
+        <h1>{{ now|date:"Y.m.d." }}</h1>
+        
+        {% csrf_token %} 
+        <!-- 지금 내 데이터가 아니라 상황에 따라서 아이템을 변경해주떄, 몇개인지 모르고 여러개일 것은 아닌데 할 때 사용 함. -->
+<!--    
+        {{weather_data.0.weather}},
+        And temperature's {{weather_data.0.temperature}}. -->
+        <p>
+
+        </p>
+        <p>
+            {{weather_data}}<br>
+            어제의 날씨는 {{weather_data.weather}}이며, 기온은 {{weather_data.temperature}}입니다.
+        </p>
+        <p>
+            우리들의 이름은 <br>
+            {{top_average}} of {{ top_average|length }}<br>
+            <ol>
+                <!--  for index in range(top_average) 
+                <li>{{top_average.index}}</li>
+                <li>{{top_average.index}}</li>
+                <li>{{top_average.index}}</li>
+                 endfor -->
+                <li>{{top_average.0}}</li>
+                <li>{{top_average.1}}</li>
+                <li>{{top_average.2}}</li>
+            </ol>
+            <ol>
+                {% for top in top_average %}
+                    <li>{{ top }}</li>
+                    {%lorem ipsum%}
+                {% endfor %}
+            </ol>
+            
+        </p>
+        <p>
+            {{top_hitters}}<br>
+            <ol>
+                <li>{{top_hitters.0.name}}, {{top_hitters.0.average}}</li>
+                <li>{{top_hitters.1.name}}, {{top_hitters.1.average}}</li>
+                <li>{{top_hitters.2.name}}, {{top_hitters.2.average}}</li>
+            </ol>
+
+        </p>
+    </p>    
+    <p>
+        오늘의 기온은
+        {% if not temperature %}
+            알 수 없습니다.
+        {% elif temperature < 10 %}
+            {{temerature}}도 이며, 매우 춥습니다.
+        {% elif temperature > 30 %}
+            {{temerature}}도 이며, 매우 덥습니다.
+        {% else %}
+            {{temerature}}도 이며, 매우 상쾌합니다.
+        {% endif %}
+    </p>
+    <p>
+        {% firstof 10 20 30%}
+        {% firstof top_hitters %}
+
+    </p>
+</body>
+</html>
