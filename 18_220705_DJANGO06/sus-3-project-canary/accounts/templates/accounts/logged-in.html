@@ -7,22 +7,14 @@
     <title>Logged In?</title>
 </head>
 <body>
-    {% if logged_in %}
-        <from action="{% url 'accounts:sign-out' %}" method="post">
-            <input type="submit" value="로그아웃" />
-        </from>
-        <button>로그아웃</button>
-        <!-- 로그인 한 상태 -->
-    {% else %}
-        <a href="{% url 'accounts:sign-in' %}">로그인</a>
-        <a href="{% url 'accounts:sign-up' %}">회원가입</a>
-        <!-- 로그인 하지 않은 상태 -->
-    {% endif %}
     {% if user.is_authenticated %}
-        <button>로가웃</button>
+    <form action="{% url 'accounts:sign-out' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="로그아웃" />
+    </form>
     {% else %}
         <a href="{% url 'accounts:sign-in' %}">로그인</a>
         <a href="{% url 'accounts:sign-up' %}">회원가입</a>
-    {% endif%}
+    {% endif %}
 </body>
 </html>
