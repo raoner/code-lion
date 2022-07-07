@@ -1,4 +1,4 @@
-"""sus_3_project URL Configuration
+"""sus_3_live URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -16,13 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("blog-url/", include("blog.blog_urls")),
-    path("survey/", include("survey.urls")),
-    path("nn-board/", include("nn_board.urls")),
     path("", include("landing.landing_urls")),
-    path("accounts/", include("accounts.accounts_urls")),
-    path("boot/", include("boot.boot_urls")),
 ]
